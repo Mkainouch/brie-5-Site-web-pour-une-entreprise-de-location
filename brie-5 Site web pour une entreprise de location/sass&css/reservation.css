@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.topNav button, footer .contact .leftDiv div button {
+.topNav button, footer .contact .leftDiv div button, form Button {
   padding: 5px 12px;
   font-size: 18px;
   background-color: #A98B69;
@@ -13,7 +13,7 @@
   font-family: "Playfair" Display;
 }
 
-.topNav button:hover, footer .contact .leftDiv div button:hover {
+.topNav button:hover, footer .contact .leftDiv div button:hover, form Button:hover {
   color: #A98B69;
   background-color: #fff;
   border: 2px solid #A98B69;
@@ -314,42 +314,116 @@ footer .footerButtom p {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #352623;
-  height: 740px;
-}
-
-header .imgDiv {
-  background: url(imgs/black-framed.jpg);
+  background-image: url(../imgs/ferrari.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  width: 50%;
+  height: 100%;
 }
 
-header .discriptiondiv {
-  width: 50%;
-  margin-top: 160px;
-}
-
-header .discriptiondiv p {
-  padding: 16px 0;
-  color: #fff;
+header div p {
+  color: #f2f2f2;
+  font-size: 50px;
+  padding: 100px;
   font-family: "Playfair" Display;
-  font-size: 40px;
-}
-
-header .discriptiondiv p i {
-  color: #A98B69;
-}
-
-header .discriptiondiv .lastParagraph {
-  font-size: 20px;
-  color: grey;
 }
 
 section {
-  height: 500px;
+  -webkit-transform: translateY(-700px);
+          transform: translateY(-700px);
 }
-/*# sourceMappingURL=home.css.map */
+
+form {
+  background-color: #fff;
+  border-bottom: 3px solid #A98B69;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+  margin: 24px 16%;
+  padding: 40px;
+}
+
+form .city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px;
+}
+
+form .city div {
+  width: 50%;
+}
+
+form .city div div {
+  width: 100%;
+  padding: 8px;
+}
+
+form .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  margin: 16px;
+}
+
+form .date div {
+  width: 25%;
+}
+
+form .date div div {
+  width: 100%;
+  padding: 8px;
+}
+
+form .remise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  margin: 16px;
+}
+
+form .remise div {
+  width: 50%;
+}
+
+form .remise div div {
+  width: 100%;
+  padding: 8px;
+}
+
+form label {
+  font-size: 18px;
+  font-family: "Playfair" Display;
+}
+
+form input {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-bottom: 2px solid #A98B69;
+  border-radius: 4px;
+  width: 90%;
+}
+
+.pub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  margin: 32px 10%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pub .textDiv {
+  background: #A98B69;
+  width: 100%;
+}
+
+.child {
+  width: 30%;
+  background-color: #A98B69;
+}
+/*# sourceMappingURL=reservation.css.map */
