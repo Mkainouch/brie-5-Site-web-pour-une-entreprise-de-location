@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../gallery.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Shojumaru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Merienda+One|Roboto&display=swap" rel="stylesheet">    <title>Document</title>
+</head>
+<body>
+    <nav class="topNav">
+        <div class="logo">
+            <p>Kainouch<span>Cars</span></p>
+        </div>
+        <ul>
+            <li><a href="home.html">ACCUEIL</a> </li>
+            <li><a href="gallery.html">GALLERY</a> </li>
+            <li><a href="reservation.html">RESERVATION</a> </li>
+        </ul>
+        <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+    </nav>
+
+    <section>
+        <div id="slideContainer">
+            <div id="sildeShow">
+                <button onclick="hideSlider()">Close</button>
+                <div>
+                    <img src="../icons/baseline_arrow_back_ios_black_18dp.png" alt="back" id="back" onclick="slidePass(-1)">
+                    <img id="img2" src="../icons/baseline_arrow_forward_ios_black_18dp.png" alt="next" id="next" onclick="slidePass(1)">
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <h3>DON'T DREAM IT, DRIVE IT!</h3>
+        </div>
+        <div class="gallery">
+            <div class="filter">
+                    <div>41 OFFERS</div>
+                    <div>VEHICLE TYPE</div>
+                    <div>NO. OF SEATS 5</div>
+            </div>
+            
+            <div>
+                <div class="Cabrio carCard" onclick="SlideImg('../imgs/CabrioCars/bmw-4er/img')">
+                    <div>
+                        <span>BMW 4 SERIES CONVERTIBLE</span>
+                        <p>or similar | Convertible (LTAR)</p>
+                    </div>
+                    <div><img src="../imgs/CabrioCars/bmw-4er/bmw0.png" alt=""></div>
+                </div>
+                <div class="carCart Cabrio" onclick="SlideImg('../imgs/CabrioCars/buick-cascada/img')">
+                    <div>
+                        <span>BUICK CASCADA CONVERTIBLE</span>
+                        <p>or similar | Convertible (ITAR)</p>
+                    </div>
+                    <div><img src="../imgs/CabrioCars/buick-cascada/buick-cascada-cabrio-4d-blau-offen-2016.png"></div>
+                </div>
+            
+                <div class="carCart Cabrio" onclick="SlideImg('../imgs/CabrioCars/ford-mustang/img')">
+                    <div>
+                        <span>FORD MUSTANG CONVERTIBLE</span>
+                    <p>or similar | Convertible (STAR)</p>
+                    </div>
+                    <div><img src="../imgs/CabrioCars/ford-mustang/ford-mustang-cabrio-2d-rot-geschl-2016.png" alt=""></div>
+                </div>
+                <div class="carCart Cabrio" onclick="SlideImg('../imgs/CabrioCars/ford-mustang-cabrio/img')">
+                   <div>
+                    <span>FORD MUSTANG GT CONVERTIBLE</span>
+                    <p>Guaranteed Model | (Ford Mustang GT Convertible)</p>
+                   </div>
+                    <div><img src="../imgs/CabrioCars/ford-mustang-cabrio/ford-mustang-cabrio-rot-offen-2017.png" alt=""></div>
+                </div>
+                
+                <div class="carCart Sedan" onclick="SlideImg()">
+                    <div>
+                        <span>BMW 3 SERIES</span>
+                        <p>or similar | Sedan (LCAR)</p>
+                    </div>
+                    <div><img src="../imgs/Sedan/bmw-3er/bmw-3er-4d-blau-2019.png" alt=""></div>
+                </div>
+                
+                <div class="carCart Sedan" onclick="SlideImg()">
+                    <div>
+                        <span>BMW 7 SERIES</span>
+                    <p>or similar | Sedan (XDAR)</p>
+                    </div>
+                    <div><img src="../imgs/Sedan/bmw-7er/bmw-7er-4d-grau-2019.png" alt=""></div>
+                </div>
+                
+                <div class="carCart Sedan" onclick="SlideImg()">
+                    <div>
+                        <span>CHRYSLER 300</span>
+                    <p>or similar | Sedan (FCAR)</p>
+                    </div>
+                    <div><img src="../imgs/Sedan/chrysler-300/chrysler-300-4d-weiss-2019.png" alt=""></div>
+                </div>
+                
+                <div class="carCart Sedan" onclick="SlideImg()">
+                    <div>
+                        <span>MERCEDES-BENZ CLA</span>
+                    <p>or similar | Sedan (PCAR)</p>
+                    </div>
+                    <div><img src="../imgs/Sedan/mb-cla-4d-weiss-2018.png" alt=""></div>
+                </div>
+                
+                <div class="carCart Sedan" onclick="SlideImg()">
+                    <div>
+                        <span>VOLKSWAGEN JETTA</span>
+                    <p>or similar | Sedan (SCAR)</p>
+                    </div>
+                    <div><img src="../imgs/Sedan/vw-jetta-4d-silber-2019.png" alt=""></div>
+                </div>
+                <div class="carCart SUV" onclick="SlideImg()">
+                    <div>
+                        <span>CHEVROLET EQUINOX</span>
+                    <p>or similar | SUV (IFAR)</p>
+                    </div>
+                    <div><img src="../imgs/SUV/chevrolet-equinox-5d-grau-2019_1.png" alt=""></div>
+                </div>
+                
+                <div class="carCart SUV" onclick="SlideImg()">
+                   <div>
+                    <span>JEEP RENEGADE</span>
+                    <p>or similar | SUV (CFAR)</p>
+                   </div>
+                    <div><img src="../imgs/SUV/jeep-renegade-5d-grau-2018.png" alt=""></div>
+                </div>
+                <div class="carCart SUV" onclick="SlideImg()">
+                    <div>
+                        <span>JEEP WRANGLER</span>
+                    <p>Guaranteed Model | (Jeep Wrangler)</p>
+                    </div>
+                    <div><img src="../imgs/SUV/jeep-wrangler-5d-braun-2018.png" alt=""></div>
+                </div>
+                
+                <div class="carCart SUV" onclick="SlideImg()">
+                    <div>
+                        <span>RANGE ROVER VELAR</span>
+                    <p>or similar | SUV (XFAR)</p>
+                    </div>
+                    <div><img src="../imgs/SUV/land-rover-range-rover-velar-5d-silber-2018.png" alt=""></div>
+                </div>
+                
+                <div class="carCart SUV" onclick="SlideImg()">
+                    <div>
+                        <span>MERCEDES-BENZ GLS</span>
+                    <p>or similar | SUV (XFAZ)</p>
+                    </div>
+                    <div><img src="../imgs/SUV/mb-gls-5d-weiss-2016.png" alt=""></div>
+                </div>
+                <div class="carCart VAN" onclick="SlideImg()">
+                    <div>
+                        <span>CHEVROLET EXPRESS</span>
+                    <p>or similar | Van (FVAR)</p>
+                    </div>
+                    <div><img src="../imgs/VAN/chevrolet-express-van-grau-2015.png" alt=""></div>
+                </div>
+                <div class="carCart Coupe" onclick="SlideImg()">
+                    <div>
+                        <span>DODGE CHARGER</span>
+                    <p>Guaranteed Model | (Dodge Charger)</p>
+                    </div>
+                    <div><img src="../imgs/Coupe/dodge-charger/dodge-charger-4d-rot-2019.png" alt=""></div>
+                </div>
+                <div class="carCart Coupe" onclick="SlideImg()">
+                    <div>
+                        <span>FORD MUSTANG SHELBY GT-S</span>
+                    <p>Guaranteed Model | (Ford Mustang Shelby GT-S)</p>
+                    </div>
+                    <div><img src="../imgs/Coupe/mustang-shelby/mustang-shelby-gt-2d-schwarz-2019.png" alt=""></div>
+                </div>
+                <div class="carCart Coupe" onclick="SlideImg()">
+                    <div>
+                        <span>TOYOTA TUNDRA</span>
+                    <p>or similar | Pickup (SPAR)</p>
+                    </div>
+                    <div><img src="../imgs/Pickup/toyota-tundra/toyota-tundra-dcab-blau-2019.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div>
+            <div class="contact">
+                <div class="leftDiv">
+                    <div>
+                        <p>Inscrivez-vous pour bénéficier de bonnes affaires et de 15% de réduction sur votre prochaine location.</p>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Addresse e-mail">
+                        <button>S'inscrire</button>
+                    </div>
+                </div>
+                <div class="rightDiv">
+                    <div>
+                        <p>Connect with Us</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="../icons/Icon-twitter.png" alt="twitter"></li>
+                            <li><img src="../icons/Icon-facebook.png" alt="facebook"> </li>
+                            <li><img src="../icons/Icon-instagram.png" alt="instagram"></li>
+                            <li><img src="../icons/Icon-youtube.png" alt="youtube"> </li>
+                            <li><img src="../icons/Icon-google-plus.png" alt="google+"> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <div><a href="home.html">ACCUEIL</a></div>
+                <div><a href="gallery.html">GALLERY</a></div>
+                <div><a href="reservation.html">RESERVATION</a></div>
+            </div>
+            <div class="footerButtom">
+                <div>
+                    <p>KainouchCars Maroc - Safi </p>
+                </div>
+                <div>
+                    <p>Telephone : 1010110101</p>
+                </div>
+                <div>
+                    <p>© 2020 KainouchCars Corporation. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/galleryScript.js"></script>
+</body>
+</html>

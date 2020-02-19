@@ -1,0 +1,32 @@
+@import "_nav&footer";
+header{
+    display: flex;
+    background-color: #352623;
+    height: 740px;
+    .imgDiv{
+        background: url(imgs/black-framed.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 50%;
+    }
+    .discriptiondiv{
+        width: 50%;
+        margin-top: 160px;
+        p{
+            padding: 16px 0;
+            color: $thirdColor;
+            font-family: $fontFamily;
+            font-size: 40px;
+            i{
+                color: $mainColor;
+            }
+        }
+        .lastParagraph{
+            font-size: 20px;
+            color:grey;
+        }
+    }
+}
+section{
+    height: 500px;
+}

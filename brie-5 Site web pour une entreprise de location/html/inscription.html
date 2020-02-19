@@ -1,0 +1,334 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../inscription.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Shojumaru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Merienda+One|Roboto&display=swap" rel="stylesheet">    <title>Document</title>
+</head>
+<body>
+    <nav class="topNav">
+        <div class="logo">
+            <p>Kainouch<span>Cars</span></p>
+        </div>
+        <ul>
+            <li><a href="home.html">ACCUEIL</a> </li>
+            <li><a href="gallery.html">GALLERY</a> </li>
+            <li><a href="reservation.html">RESERVATION</a> </li>
+        </ul>
+        <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+    </nav>
+    <header>
+    </header>
+    <section>
+
+        <div class="container">
+            <h3>Vos informations personnelles</h3>
+            <form action="">
+                <div class="fullName">
+                    <div class="prenom">
+                        <div>
+                            <label for="">Prénom (sans accent) *</label>
+                        </div>
+                        <div>
+                            <input name="your name" id="firstName" type="text">
+                        </div>
+                    </div>
+                    <div class="nom">
+                        <div>
+                            <label for="">Nom ( sans accent ) *</label>
+                        </div>
+                        <div>
+                            <input id="lastName" type="text">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="email">
+                    <div>
+                        <label for="">Par e-mail *</label>
+                    </div>
+                    <div>
+                        <input id="email" type="email">
+                    </div>
+                </div>
+                <div class="confEmail">
+                    <div>
+                        <label for="">Confirmez votre email *</label>
+                    </div>
+                    <div>
+                        <input id="confEmail" type="email">
+                    </div>
+                </div>
+                <div class="Password">
+                    <div>
+                        <label for="">Mot de passe *</label>
+                    </div>
+                    <div>
+                        <input id="password" type="password">
+                    </div>
+                </div>
+                <div class="confPassword">
+                    <div>
+                        <label for="">Confirmez votre mot de passe *</label>
+                    </div>
+                    <div>
+                        <input id="confPassword" type="password">
+                    </div>
+                </div>
+                <div class="phon">
+                    <div>
+                        <label for="">Téléphone *</label>
+                    </div>
+                    <div>
+                        <input id="phon" type="number">
+                    </div>
+                </div>
+
+                <div>                        
+                    <h3>Date de naissance</h3>
+                    <div class="birthday">
+                        <div class="year">
+                            <div><label for="">Année *</label></div>
+                            <div>
+                                <select name="" id="birthYear"> 
+                                    <option value="1999"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="month">
+                            <div><label for="">Mois *</label></div>
+                            <div>
+                                <select name="" id="birthMonth"> 
+                                    <option value=""></option>
+                                    <option value="janv.">janv</option>
+                                    <option value="fevr.">fevr</option>
+                                    <option value="mars">mars</option>
+                                    <option value="avr.">avr</option>
+                                    <option value="mai">mai</option>
+                                    <option value="juin">juin</option>
+                                    <option value="juil">juil</option>
+                                    <option value="auot">auot</option>
+                                    <option value="sept">sept</option>
+                                    <option value="oct">oct</option>
+                                    <option value="nov">nov</option>
+                                    <option value="dec">dec</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <div><label for="">Jour *</label></div>
+                            <div>
+                                <select name="" id="birthDay"> 
+                                    <option value=""></option>
+                                    <option value="1">1</option>
+                                    <option value="1">2</option>
+                                    <option value="1">3</option>
+                                    <option value="1">4</option>
+                                    <option value="1">5</option>
+                                    <option value="1">6</option>
+                                    <option value="1">7</option>
+                                    <option value="1">8</option>
+                                    <option value="1">9</option>
+                                    <option value="1">10</option>
+                                    <option value="1">11</option>
+                                    <option value="1">12</option>
+                                    <option value="1">13</option>
+                                    <option value="1">14</option>
+                                    <option value="1">15</option>
+                                    <option value="1">16</option>
+                                    <option value="1">17</option>
+                                    <option value="1">18</option>
+                                    <option value="1">19</option>
+                                    <option value="1">20</option>
+                                    <option value="1">21</option>
+                                    <option value="1">22</option>
+                                    <option value="1">23</option>
+                                    <option value="1">24</option>
+                                    <option value="1">25</option>
+                                    <option value="1">26</option>
+                                    <option value="1">27</option>
+                                    <option value="1">28</option>
+                                    <option value="1">29</option>
+                                    <option value="1">30</option>
+                                    <option value="1">31</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Informations sur le permis de conduire du conducteur</h3>
+                    <div class="permis">
+                        <div><label for=""></label>Numéro de permis de conduire *</div>
+                        <div>
+                            <input id="DriverLicenseNumber" type="text">
+                        </div>
+                    </div>
+                    <div class="country">
+                        <div><label for=""></label>Pays/Region de délivrance du permis de conduire *</div>
+                        <div>
+                            <input id="country" type="text">
+                        </div>
+                    </div>
+                    <div class="emission">
+                        <div class="anneeD">
+                            <div><label for=""></label>Année d'émission *</div>
+                            <div>
+                                <input id="ReleaseYear" type="text">
+                            </div>
+                        </div>
+                        <div class="moisD">
+                            <div><label for="">Mois d'émission *</label></div>
+                            <div>
+                                <input id="ReleaseMonth" type="text">
+                            </div>
+                        </div>
+                        <div class="jourD">
+                            <div><label for="">Jour d'émission *</label></div>
+                            <div>
+                                <input id="ReleaseDay" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Informations sur la carte de crédit</h3>
+                    <div class="carteCredit">
+                        <div class="typeCarte">
+                            <div><label for="">Carte de Crédit *</label></div>
+                            <div>
+                                <input id="CreditCardType" type="text">
+                            </div>
+                        </div>
+                        <div class="numeroCarte">
+                            <div><label for="">Numéro de carte de crédit *</label></div>
+                            <div>
+                                <input id="CreditCardNumber" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dateCarte">
+                        <div class="moisCarte">
+                        <div><label for="">Mois *</label></div>
+                        <div>
+                            <input id="CreditCardMonth" type="text">
+                        </div>
+                        </div>
+                        <div class="anneeCarte">
+                            <div><label for="">Année *</label></div>
+                            <div>
+                                <input id="CreditCardYear" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3></h3>
+                        <div class="radio">
+                            <div>
+                                <input type="radio">
+                                <label for="">Domicile</label>
+                            </div>
+                            <div>
+                                <input type="radio">
+                                <label for="">Bureau</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adresse">
+                        <div><label for="">Complément d'adresse *</label></div>
+                        <div>
+                            <input id="adresse" type="text">
+                        </div>
+                    </div>
+                    <div class="adresse">
+                        <div><label for="">Complément d'adresse</label></div>
+                        <div>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="ville">
+                        <div><label for="">Ville *</label></div>
+                        <div>
+                            <input id="city" type="text">
+                        </div>
+                    </div>
+                    <div class="pays">
+                        <div><label for="">Pays/Region *</label></div>
+                        <div>
+                            <input id="country" type="text">
+                        </div>
+                    </div>
+                    <div class="codePostal">
+                        <div><label for="">Code Postal *</label></div>
+                        <div>
+                            <input id="zipCode" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="conditions">                    
+                    <input id="conditions" type="checkbox">
+                    <label for=""> J'ai lu et j'accepte les Conditions générales .</label>
+
+                </div>
+                <div class="enregistrerbtn">
+                    <!-- <input onclick="inscr()" type="submit"> -->
+                    <!-- <button onclick="inscrir()">Inscrire</button> -->
+                    <div  class="button" onclick="inscrir()"> inscrir</div>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+    
+    <footer>
+        <div>
+            <div class="contact">
+                <div class="leftDiv">
+                    <div>
+                        <p>Inscrivez-vous pour bénéficier de bonnes affaires et de 15% de réduction sur votre prochaine location.</p>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Addresse e-mail">
+                        <button>S'inscrire</button>
+                    </div>
+                </div>
+                <div class="rightDiv">
+                    <div>
+                        <p>Connect with Us</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="../icons/Icon-twitter.png" alt="twitter"></li>
+                            <li><img src="../icons/Icon-facebook.png" alt="facebook"> </li>
+                            <li><img src="../icons/Icon-instagram.png" alt="instagram"></li>
+                            <li><img src="../icons/Icon-youtube.png" alt="youtube"> </li>
+                            <li><img src="../icons/Icon-google-plus.png" alt="google+"> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <div><a href="home.html">ACCUEIL</a></div>
+                <div><a href="gallery.html">GALLERY</a></div>
+                <div><a href="reservation.html">RESERVATION</a></div>
+            </div>
+            <div class="footerButtom">
+                <div>
+                    <p>KainouchCars Maroc - Safi </p>
+                </div>
+                <div>
+                    <p>Telephone : 1010110101</p>
+                </div>
+                <div>
+                    <p>© 2020 KainouchCars Corporation. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/inscription.js"></script>
+</body>
+</html>
