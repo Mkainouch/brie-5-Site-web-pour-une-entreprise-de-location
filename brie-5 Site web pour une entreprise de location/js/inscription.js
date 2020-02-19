@@ -36,10 +36,6 @@ function inscrir(){
     for(var i=0; i<=checkField.length; i++){
         if(checkField[i].value == ""){
             checkField[i].style.borderBottomColor = "red";
-             // alert("vous devez entrer tous champs obligatoire" );
-        }
-        else if(checkField[i].value !== ""){
-            checkField[i].style.borderBottomColor = ;
         }
     }
 
@@ -49,13 +45,6 @@ function inscrir(){
     // CreditCardNumber =="" || CreditCardMonth =="" || CreditCardYear =="" ||adresse =="" ||city =="" ||
     // country =="" || zipCode =="" ||conditions)
 
-  
-    // if(checkFields[i] == ""){
-
-    //            alert("vous devez entrer tous champs obligatoire");
-    //            console.log("vide")
-
-    // }else{
 
     //     if(Reg.test(email) == false){
     //         alert("vous devez respécter la forme de email");
