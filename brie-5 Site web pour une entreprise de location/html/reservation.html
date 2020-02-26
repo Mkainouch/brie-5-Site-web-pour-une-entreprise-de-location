@@ -9,21 +9,24 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="topNav">
-        <div class="logo">
-            <p>Kainouch<span>Cars</span></p>
-        </div>
-        <ul>
-            <li><a href="home.html">ACCUEIL</a> </li>
-            <li><a href="gallery.html">GALLERY</a> </li>
-            <li><a href="reservation.html">RESERVATION</a> </li>
-        </ul>
-        <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+    <nav>
+        <input type="checkbox" id="checkNav">
+        <label id="checkNavBtn" for="checkNav"><img src="../icons/iconMenu.png" alt="" width="24px"></label>
+        <div id="topNav">
+                <div class="logo">
+                <p>Kainouch<span>Cars</span></p>
+                </div>
+                <ul>
+                    <li><a href="home.html">ACCUEIL</a> </li>
+                    <li><a href="gallery.html">GALLERY</a> </li>
+                    <li><a href="reservation.html">RESERVATION</a> </li>
+                </ul>
+                <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+            </div>
     </nav>
-    <header>
+    <header class="header">
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
     </header>
     <section>
@@ -47,48 +50,44 @@
                 </div>
             </div>
             <div class="date">
-                <div>
+                <div class="DateDePrise">
                     <div>
-                        <label for="">Date de prise en charge</label>
+                        <div>
+                            <label for="">Date de prise en charge</label>
+                        </div>
+                        <div>
+                            <input type="date">
+                        </div>
                     </div>
                     <div>
-                        <input type="date">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label for="">Heure de prise en charge</label>
-                    </div>
-                    <div>
-                        <input type="time">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label for="">Date de retour</label>
-                    </div>
-                    <div>
-                        <input type="date">
+                        <div>
+                            <label for="">Heure de prise en charge</label>
+                        </div>
+                        <div>
+                            <input type="time">
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div class="DateDeRetour">
                     <div>
-                        <label for="">Heure de prise en charge</label>
+                        <div>
+                            <label for="">Date de retour</label>
+                        </div>
+                        <div>
+                            <input type="date">
+                        </div>
                     </div>
                     <div>
-                        <input type="time">
+                        <div>
+                            <label for="">Heure de prise en charge</label>
+                        </div>
+                        <div>
+                            <input type="time">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="remise">
-                <div>
-                    <div>
-                    <label for="">Code remise</label>
-                    </div>
-                    <div>
-                        <input type="text">
-                    </div>
-                </div>
+            <div class="age">
                 <div>
                     <div>
                         <label for="">Âge</label>
@@ -115,7 +114,7 @@
                 </div>
             </div>
         </div>
-        <div class="pub" >
+        <!-- <div class="pub" >
             <div class="child">
                 <div></div>
                 <div></div>
@@ -131,9 +130,8 @@
                 <div></div>
                 <div></div>
             </div>
-        </div>
+        </div> -->
     </section>
-    
     <footer>
         <div>
             <div class="contact">
@@ -179,5 +177,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/reservation.js"></script>
 </body>
 </html>

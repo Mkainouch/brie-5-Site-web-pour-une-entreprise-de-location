@@ -8,26 +8,32 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Merienda+One|Roboto&display=swap" rel="stylesheet">    <title>Document</title>
 </head>
 <body>
-    <nav class="topNav">
-        <div class="logo">
-            <p>Kainouch<span>Cars</span></p>
-        </div>
-        <ul>
-            <li><a href="home.html">ACCUEIL</a> </li>
-            <li><a href="gallery.html">GALLERY</a> </li>
-            <li><a href="reservation.html">RESERVATION</a> </li>
-        </ul>
-        <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+    <nav>
+        <input type="checkbox" id="checkNav">
+        <label id="checkNavBtn" for="checkNav"><img src="../icons/iconMenu.png" alt="" width="24px"></label>
+        <div id="topNav">
+                <div class="logo">
+                <p>Kainouch<span>Cars</span></p>
+                </div>
+                <ul>
+                    <li><a href="home.html">ACCUEIL</a> </li>
+                    <li><a href="gallery.html">GALLERY</a> </li>
+                    <li><a href="reservation.html">RESERVATION</a> </li>
+                </ul>
+                <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+            </div>
     </nav>
+    
 
     <section>
         <div id="slideContainer">
+            <button onclick="hideSlider()">Close</button>
             <div id="sildeShow">
-                <button onclick="hideSlider()">Close</button>
                 <div>
                     <img src="../icons/baseline_arrow_back_ios_black_18dp.png" alt="back" id="back" onclick="slidePass(-1)">
                     <img id="img2" src="../icons/baseline_arrow_forward_ios_black_18dp.png" alt="next" id="next" onclick="slidePass(1)">
                 </div>
+                <button id="RESERVATIONbtn" onclick="reservation()">RESERVATION</button>
             </div>
         </div>
 
@@ -36,9 +42,9 @@
         </div>
         <div class="gallery">
             <div class="filter">
-                    <div>41 OFFERS</div>
+                    <!-- <div>41 OFFERS</div>
                     <div>VEHICLE TYPE</div>
-                    <div>NO. OF SEATS 5</div>
+                    <div>NO. OF SEATS 5</div> -->
             </div>
             
             <div>

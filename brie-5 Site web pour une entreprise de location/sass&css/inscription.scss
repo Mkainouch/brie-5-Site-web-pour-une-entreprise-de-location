@@ -197,7 +197,7 @@
 
 .enregistrerbtn{
     margin-top: 56px;
-    .button{
+    button{
         @extend %buttonStyle;
         width: max-content;
     }

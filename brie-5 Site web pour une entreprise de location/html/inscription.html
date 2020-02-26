@@ -8,49 +8,55 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Merienda+One|Roboto&display=swap" rel="stylesheet">    <title>Document</title>
 </head>
 <body>
-    <nav class="topNav">
-        <div class="logo">
-            <p>Kainouch<span>Cars</span></p>
-        </div>
-        <ul>
-            <li><a href="home.html">ACCUEIL</a> </li>
-            <li><a href="gallery.html">GALLERY</a> </li>
-            <li><a href="reservation.html">RESERVATION</a> </li>
-        </ul>
-        <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+    <nav>
+        <input type="checkbox" id="checkNav">
+        <label id="checkNavBtn" for="checkNav"><img src="../icons/iconMenu.png" alt="" width="24px"></label>
+        <div id="topNav">
+                <div class="logo">
+                <p>Kainouch<span>Cars</span></p>
+                </div>
+                <ul>
+                    <li><a href="home.html">ACCUEIL</a> </li>
+                    <li><a href="gallery.html">GALLERY</a> </li>
+                    <li><a href="reservation.html">RESERVATION</a> </li>
+                </ul>
+                <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
+            </div>
     </nav>
     <header>
     </header>
     <section>
-
         <div class="container">
+            <p id="requiredFields"></p>
             <h3>Vos informations personnelles</h3>
             <form action="">
                 <div class="fullName">
                     <div class="prenom">
                         <div>
-                            <label for="">Prénom (sans accent) *</label>
+                            <label for="">Prénom *</label>
                         </div>
                         <div>
-                            <input name="your name" id="firstName" type="text">
+                            <input  id="firstName" type="text" placeholder="Prénom" onchange="myFunction()" >
+                            <p id="firstNameP"></p>
                         </div>
                     </div>
                     <div class="nom">
                         <div>
-                            <label for="">Nom ( sans accent ) *</label>
+                            <label for="">Nom *</label>
                         </div>
                         <div>
-                            <input id="lastName" type="text">
+                            <input id="lastName" type="text" placeholder="Nom" onchange="myFunction()">
+                            <p id="lastNameP"></p>
                         </div>
                     </div>
                 </div>
-                
                 <div class="email">
                     <div>
                         <label for="">Par e-mail *</label>
                     </div>
                     <div>
-                        <input id="email" type="email">
+                        <input id="email" type="email" placeholder="e-mail">
+                        <p id="emailP"></p>
                     </div>
                 </div>
                 <div class="confEmail">
@@ -58,7 +64,8 @@
                         <label for="">Confirmez votre email *</label>
                     </div>
                     <div>
-                        <input id="confEmail" type="email">
+                        <input id="confEmail" type="email" placeholder="Confirmez votre email">
+                        <p id="confEmailP"></p>
                     </div>
                 </div>
                 <div class="Password">
@@ -66,7 +73,8 @@
                         <label for="">Mot de passe *</label>
                     </div>
                     <div>
-                        <input id="password" type="password">
+                        <input id="password" type="password" placeholder="Mot de passe">
+                        <p id="passwordP"></p>
                     </div>
                 </div>
                 <div class="confPassword">
@@ -74,7 +82,8 @@
                         <label for="">Confirmez votre mot de passe *</label>
                     </div>
                     <div>
-                        <input id="confPassword" type="password">
+                        <input id="confPassword" type="password" placeholder="Confirmez votre mot de passe">
+                        <p id="confpasswordP"></p>
                     </div>
                 </div>
                 <div class="phon">
@@ -82,7 +91,8 @@
                         <label for="">Téléphone *</label>
                     </div>
                     <div>
-                        <input id="phon" type="number">
+                        <input id="phon" type="number" placeholder="Téléphone">
+                        <p id="phonP"></p>
                     </div>
                 </div>
 
@@ -92,15 +102,16 @@
                         <div class="year">
                             <div><label for="">Année *</label></div>
                             <div>
-                                <select name="" id="birthYear"> 
+                                <select id="birthYear" > 
                                     <option value="1999"></option>
                                 </select>
+                                <p id="birthYearP"></p>
                             </div>
                         </div>
                         <div class="month">
                             <div><label for="">Mois *</label></div>
                             <div>
-                                <select name="" id="birthMonth"> 
+                                <select id="birthMonth"> 
                                     <option value=""></option>
                                     <option value="janv.">janv</option>
                                     <option value="fevr.">fevr</option>
@@ -116,12 +127,13 @@
                                     <option value="dec">dec</option>
 
                                 </select>
+                                <p id="birthMonthP"></p>
                             </div>
                         </div>
                         <div class="day">
                             <div><label for="">Jour *</label></div>
                             <div>
-                                <select name="" id="birthDay"> 
+                                <select id="birthDay"> 
                                     <option value=""></option>
                                     <option value="1">1</option>
                                     <option value="1">2</option>
@@ -155,6 +167,7 @@
                                     <option value="1">30</option>
                                     <option value="1">31</option>
                                 </select>
+                                <p id="birthDayP"></p>
                             </div>
                         </div>
                     </div>
@@ -165,12 +178,14 @@
                         <div><label for=""></label>Numéro de permis de conduire *</div>
                         <div>
                             <input id="DriverLicenseNumber" type="text">
+                            <p id="DriverLicenseNumberP"></p>
                         </div>
                     </div>
                     <div class="country">
                         <div><label for=""></label>Pays/Region de délivrance du permis de conduire *</div>
                         <div>
                             <input id="country" type="text">
+                            <p id="countryP"></p>
                         </div>
                     </div>
                     <div class="emission">
@@ -178,18 +193,21 @@
                             <div><label for=""></label>Année d'émission *</div>
                             <div>
                                 <input id="ReleaseYear" type="text">
+                                <p id="ReleaseYearP"></p>
                             </div>
                         </div>
                         <div class="moisD">
                             <div><label for="">Mois d'émission *</label></div>
                             <div>
                                 <input id="ReleaseMonth" type="text">
+                                <p id="ReleaseMonthP"></p>
                             </div>
                         </div>
                         <div class="jourD">
                             <div><label for="">Jour d'émission *</label></div>
                             <div>
                                 <input id="ReleaseDay" type="text">
+                                <p id="ReleaseDayP"></p>
                             </div>
                         </div>
                     </div>
@@ -201,12 +219,15 @@
                             <div><label for="">Carte de Crédit *</label></div>
                             <div>
                                 <input id="CreditCardType" type="text">
+                                <p id="CreditCardTypeP"></p>
+
                             </div>
                         </div>
                         <div class="numeroCarte">
                             <div><label for="">Numéro de carte de crédit *</label></div>
                             <div>
                                 <input id="CreditCardNumber" type="text">
+                                <p id="CreditCardNumberP"></p>
                             </div>
                         </div>
                     </div>
@@ -215,12 +236,14 @@
                         <div><label for="">Mois *</label></div>
                         <div>
                             <input id="CreditCardMonth" type="text">
+                            <p id="CreditCardMonthP"></p>
                         </div>
                         </div>
                         <div class="anneeCarte">
                             <div><label for="">Année *</label></div>
                             <div>
                                 <input id="CreditCardYear" type="text">
+                                <p id="CreditCardYearP"></p>
                             </div>
                         </div>
                     </div>
@@ -242,6 +265,7 @@
                         <div><label for="">Complément d'adresse *</label></div>
                         <div>
                             <input id="adresse" type="text">
+                            <p id="adresseP"></p>
                         </div>
                     </div>
                     <div class="adresse">
@@ -254,36 +278,38 @@
                         <div><label for="">Ville *</label></div>
                         <div>
                             <input id="city" type="text">
+                            <p id="cityP"></p>
                         </div>
                     </div>
                     <div class="pays">
                         <div><label for="">Pays/Region *</label></div>
                         <div>
                             <input id="country" type="text">
+                            <p id="countryP"></p>
                         </div>
                     </div>
                     <div class="codePostal">
                         <div><label for="">Code Postal *</label></div>
                         <div>
                             <input id="zipCode" type="text">
+                            <p id="zipCodeP"></p>
                         </div>
                     </div>
                 </div>
                 <div class="conditions">                    
                     <input id="conditions" type="checkbox">
                     <label for=""> J'ai lu et j'accepte les Conditions générales .</label>
+                    <p id="conditionsP"></p>
+
 
                 </div>
                 <div class="enregistrerbtn">
-                    <!-- <input onclick="inscr()" type="submit"> -->
-                    <!-- <button onclick="inscrir()">Inscrire</button> -->
-                    <div  class="button" onclick="inscrir()"> inscrir</div>
+                    <button type="button" onclick="inscrir()">Inscrire</button>
                 </div>
             </form>
         </div>
         
     </section>
-    
     <footer>
         <div>
             <div class="contact">

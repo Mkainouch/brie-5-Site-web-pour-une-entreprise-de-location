@@ -2,48 +2,6 @@
 section{
     padding-bottom: 200px;
     background-color: $mainColor;
-    #slideContainer{
-        visibility: hidden;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        background-color: rgba($color: #000000, $alpha: .7);
-        justify-items: center;
-        #sildeShow{
-            width: 80%;
-            height: 70%;
-            margin: 120px auto;
-            border: 2px solid $fourthColor;
-            background-image: url();
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            button{
-                color: white;
-                background-color:rgba($color: #000000, $alpha: .0);
-                font-weight: bold;;
-                border:2px solid $mainColor;
-                border-radius: 12px;
-                padding: 2px 8px;
-                margin: 16px 0 0 16px;
-                &:hover{
-                    background-color: red;
-                    border:2px solid red;
-                }
-            }
-            div{
-                display: flex;
-                width: 100%;
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                #img2{
-                    position: absolute;
-                    right: 0;
-                }
-            }
-        }
-    }
     .header{
         height: 240px;
         background-color: black;
@@ -56,9 +14,78 @@ section{
             padding: 120px 0 0 32px;
         }
     }
+    #slideContainer{
+        visibility: hidden;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: .9);
+        justify-items: center;
+        button{
+            color: white;
+            background-color:rgba($color: #000000, $alpha: .0);
+            font-weight: bold;;
+            border:2px solid $mainColor;
+            border-radius: 12px;
+            padding: 2px 8px;
+            margin: 100px 0 0 16px;
+            &:hover{
+                background-color: red;
+                border:2px solid red;
+            }
+        }
+    
+        #sildeShow{
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            div{
+                display: flex;
+                width: 100%;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                #img2{
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            button{
+                @extend %buttonStyle;
+                font-size: 40px;
+                position: absolute;
+                right: 100px;
+                bottom: 150px;
+            }
+            @media #{$maxMobile} {
+                width: 100%;
+                height: 30%;
+                margin-top: 50%;
+                transform: translateY(-50%);
+                border: none;
+            }
+            @media #{$minSmall} {
+                width: 100%;
+                height: 45%;
+                border: none;
+            }
+            @media #{$minMedium} {
+                width: 100%;
+                height: 60%;
+            }
+            @media #{$minLarge} {
+                width: 96%;
+                height: 76%;
+                margin: 16px auto;
+            }
+           
+        }
+    }
     .gallery{
         margin: 0px 7%;
         .filter{
+            height: 32px;
             border-bottom: 1px solid $fourthColor;
             margin-bottom: 16px;
             padding: 0;
@@ -73,7 +100,7 @@ section{
         div{
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
             width: 100%;
             padding: 24px 0; 
             div{
@@ -101,6 +128,9 @@ section{
                         height: 160px;
                         width: 290px;
                         padding: 16px 0;
+                        @media #{$maxMobile} {
+                            padding: 5px 0;
+                        }
                     } 
                 }
                 &:hover{
@@ -120,7 +150,21 @@ section{
                     }
                     
                 }
+                @media #{$maxMobile}{
+                width: 100%;
+                display: flex;
+                }
             }
+            
+        }
+        @media #{$minSmall}{
+            margin: 0 3%;
+        }
+        @media #{$minMedium}{
+            margin: 0 5%;
+        }
+        @media #{$minLarge}{
+            margin: 0 7%;
         }
     }
 }

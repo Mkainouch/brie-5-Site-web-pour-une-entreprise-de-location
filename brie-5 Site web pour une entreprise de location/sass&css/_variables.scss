@@ -8,4 +8,8 @@ $fontFamily2: 'Roboto', sans-serif;
 $navFontFamily:'Montserrat', sans-serif;
 $mainFontSize: 16px;
 $sideSpace: 0 7% 0 7%;
-$maxMobile:767px;
+$maxMobile:"(max-width: 767px)";
+$minSmall:"(min-width: 768px)";
+$minMedium:"(min-width: 991px)";
+$minLarge:"(min-width: 1200px)";
+

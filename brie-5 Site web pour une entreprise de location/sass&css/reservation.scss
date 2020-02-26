@@ -8,9 +8,8 @@
     color: $thirdColor;
     font-family: $fontFamily;
 }
-header{
+.header{
     background-image: url(../imgs/ferrari.jpg);
-    background-size: 100%;
     background-repeat: no-repeat;
     height: 100%;
     div{
@@ -21,9 +20,14 @@ header{
             font-family: $fontFamily;
         }
     }
+    @media #{$maxMobile} {
+    display: none;    }
 }
 section{
     transform: translateY(-700px);
+    @media #{$maxMobile} {
+        transform: translateY(0px);
+    }
 }
 form{
     background-color: $thirdColor;
@@ -41,22 +45,59 @@ form{
                 width: 100%;
                 padding: 8px;
             }
+            @media #{$maxMobile} {
+                width: 100%;
+            }
+        }
+        @media #{$maxMobile} {
+            display: block;
+            width: 100%;
+            padding:0;
+            margin: 0;
         }
     }
     .date{
         display: flex;
         padding: 16px;
         margin: 16px;
-
-        div{
-            width: 25%;
+        .DateDePrise{
+            width: 50%;
+            display: flex;
             div{
-                width: 100%;
-                padding: 8px;
+                width: 50%;
+                div{
+                    width: 100%;
+                    padding: 8px;
+                }
+                @media #{$maxMobile} {
+                    width: 100%;
+                }
             }
         }
+        .dateDeRetour{
+            width: 50%;
+            display: flex;
+            div{
+                width: 50%;
+                div{
+                    width: 100%;
+                    padding: 8px;
+                }
+                @media #{$maxMobile} {
+                    width: 100%;
+                }
+            }
+        }
+
+        
+        @media #{$maxMobile} {
+            display: block;
+            width: 100%;
+            padding:0;
+            margin: 0;
+        }
     }
-    .remise{
+    .age{
         display: flex;
         padding: 16px;
         margin: 16px;
@@ -66,10 +107,31 @@ form{
                 width: 100%;
                 padding: 8px;
             }
+            @media #{$maxMobile} {
+                width: 100%;
+            }
+        }
+        @media #{$minSmall} {
+            width: 100%;
+            padding: 5px 0px;
+        }
+        @media #{$maxMobile} {
+            display: block;
+            width: 100%;
+            padding:0;
+            margin: 0;
         }
     }
     Button{
         @extend %buttonStyle;
+        @media #{$minSmall} {
+            width: 100%;
+            padding: 5px 0px;
+        }
+        @media #{$maxMobile} {
+            width: 100%;
+            padding: 5px 0px;
+        }
     }
     label{
         font-size: 18px;
@@ -83,18 +145,29 @@ form{
         border-radius:4px ;
         width: 90%;
     }
+    @media #{$minSmall} {
+        margin: 120px 10%;
+        padding: 40px 8px;
+    }
+    @media #{$maxMobile} {
+        margin: 120px 10%;
+        padding: 40px 8px;
+    }
 }
 .pub{
     display: flex;
     height: 300px;
-    margin: 32px 10%;
+    margin: 64px 10%;
     justify-content: space-between;
     .textDiv{
-        background:$mainColor;
+        box-shadow: 0px 0px 16px 2px gray;
         width: 100%;
     }
 }
-.child{
-    width: 30%;
-    background-color: $mainColor;
-}
+// .child{
+//     width: 30%;
+//     box-shadow: 0px 0px 16px 2px gray;
+//     @media #{$maxMobile} {
+//         display: none;
+//     }
+// }

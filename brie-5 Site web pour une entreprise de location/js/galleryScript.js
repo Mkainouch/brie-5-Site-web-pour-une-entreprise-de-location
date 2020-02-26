@@ -1,5 +1,6 @@
 var path;
 var pos;
+
 function SlideImg(imgPath) {
     document.getElementById('sildeShow').style.backgroundImage = "url('"+imgPath+1+".jpg')";
     path=imgPath;
@@ -23,3 +24,8 @@ function slidePass(i){
     }
     document.getElementById('sildeShow').style.backgroundImage = "url('"+path+pos+".jpg')";
 }
+
+function reservation(){
+    console.log(document.getElementById('sildeShow'));
+}
+    
