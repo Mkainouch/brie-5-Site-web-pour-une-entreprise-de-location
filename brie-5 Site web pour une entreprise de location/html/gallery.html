@@ -3,9 +3,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../sass&css/gallery.css">
+    <link rel="stylesheet" href="../style/gallery.css">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Shojumaru&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Merienda+One|Roboto&display=swap" rel="stylesheet">    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Merienda+One|Roboto&display=swap" rel="stylesheet">    
+    <title>KainouchCars</title>
 </head>
 <body>
     <nav>
@@ -18,7 +19,6 @@
                 <ul>
                     <li><a href="home.html">ACCUEIL</a> </li>
                     <li><a href="gallery.html">GALLERY</a> </li>
-                    <li><a href="reservation.html">RESERVATION</a> </li>
                 </ul>
                 <button onclick="window.location.href='inscription.html'">Se connecter/S’inscrire</button>
             </div>
@@ -26,21 +26,10 @@
     
 
     <section>
-        <div id="slideContainer">
-            <button onclick="hideSlider()">Close</button>
-            <div id="sildeShow">
-                <div>
-                    <img src="../icons/baseline_arrow_back_ios_black_18dp.png" alt="back" id="back" onclick="slidePass(-1)">
-                    <img id="img2" src="../icons/baseline_arrow_forward_ios_black_18dp.png" alt="next" id="next" onclick="slidePass(1)">
-                </div>
-                <button id="RESERVATIONbtn" onclick="reservation()">RESERVATION</button>
-            </div>
-        </div>
-
-        <div class="header">
+        <div class="header" id="header">
             <h3>DON'T DREAM IT, DRIVE IT!</h3>
         </div>
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <div class="filter">
                     <!-- <div>41 OFFERS</div>
                     <div>VEHICLE TYPE</div>
@@ -48,7 +37,7 @@
             </div>
             
             <div>
-                <div class="Cabrio carCard" onclick="SlideImg('../imgs/CabrioCars/bmw-4er/img')">
+                <div id="img1" class="carCart Cabrio" onclick="SlideImg('../imgs/CabrioCars/bmw-4er/img')">
                     <div>
                         <span>BMW 4 SERIES CONVERTIBLE</span>
                         <p>or similar | Convertible (LTAR)</p>
@@ -185,9 +174,189 @@
                 </div>
             </div>
         </div>
+        <div id="s-r-container">
+            <div id="slideContainer">
+                <button onclick="hideSlider()">Close</button>
+                <div id="sildeShow">
+                    <div>
+                        <img src="../icons/baseline_arrow_back_ios_black_18dp.png" alt="back" id="back" onclick="slidePass(-1)">
+                        <img id="img2" src="../icons/baseline_arrow_forward_ios_black_18dp.png" alt="next" id="next" onclick="slidePass(1)">
+                    </div>
+                    <button id="RESERVATIONbtn" onclick="reservationForm()">RESERVATION</button>
+                </div>
+            </div>
+    
+            <div id="reservationContainer">
+                <button onclick="reservationClose()">Close</button>
+                <div class="reservation_form">
+                    <div id="imgs"></div>
+                    <form action="">
+                        <div class="fullName">
+                            <div class="prenom" onclick="firstName()">
+                                <div>
+                                    <label for="">Prénom *</label>
+                                </div>
+                                <div>
+                                    <input type="text" id="firstName" name="Prénom" placeholder=""  >
+                                    <p id="firstNameP"></p>
+                                </div>
+                            </div>
+                            <div class="nom">
+                                <div>
+                                    <label for="">Nom *</label>
+                                </div>
+                                <div>
+                                    <input type="text" id="lastName" name="Nom" placeholder="">
+                                    <p id="lastNameP"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="birthday">
+                            <div>
+                                <label for="">Date de naissance *</label>
+                            </div>
+                            <div>
+                                <input type="date" id="birthDay" name="Date de naissance">
+                            </div>
+                        </div>
+                        <div class="city">
+                            <div class="">
+                                <div>
+                                    <label for="">Ville, gare ou aéroport de départ</label>                    
+                                </div>
+                                <div>
+                                    <input type="text" id="fromCity" name="Ville, gare ou aéroport de départ">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div>
+                                    <label for="">Ville, gare ou aéroport de retour</label>
+                                </div>
+                                <div>
+                                    <input type="text" id="toCity" name="Ville, gare ou aéroport de retour">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <div class="DateDePrise">
+                                <div>
+                                    <div>
+                                        <label for="">Date de prise en charge</label>
+                                    </div>
+                                    <div>
+                                        <input type="date" id="startDate" name="Date de prise en charge">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label for="">Heure de prise en charge</label>
+                                    </div>
+                                    <div>
+                                        <input type="time" id="startHour" name="Heure de prise en charge">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="DateDeRetour">
+                                <div>
+                                    <div>
+                                        <label for="">Date de retour</label>
+                                    </div>
+                                    <div>
+                                        <input type="date" id="endDate" name="Date de retour">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label for="">Heure de retour</label>
+                                    </div>
+                                    <div>
+                                        <input type="time" id="endHour" name="Heure de retour">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div>
+                                <button type="button" id="reservationConfBtn" onclick="reservationConf()">RESERVE</button>
+                            </div>                    
+                    </form>
+        
+                </div>
+               
+            </div>
+            <!-- ================================================ -->
+            <div id="reservationConfirmationContainer">
+                <div class="reservationConfirmtion_form">
+                    <div id="imgs" class="imgss"></div>
+                    <form action="">
+                        <div class="fullName">
+                            <div class="prenom" onclick="firstName()">
+                                <div>
+                                    <label for="">Voter Prénom est : <Span class="fieldConfirm"></Span></label>
+                                </div>
+                            </div>
+                            <div class="nom">
+                                <div>
+                                    <label for="">Votre Nom est : <Span class="fieldConfirm"></Span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="birthday">
+                            <div>
+                                <label for="">Votre age est : <Span class="fieldConfirm"></Span></label>
+                            </div>
+                        </div>
+                        <div class="city">
+                            <div class="">
+                                <div>
+                                    <label for="">Ville, gare ou aéroport de départ est : <Span class="fieldConfirm"></Span></label>                    
+                                </div>
+                            </div>
+                            <div class="">
+                                <div>
+                                    <label for="">Ville, gare ou aéroport de retour est : <Span class="fieldConfirm"></Span></label>
+                                </div>
+                            </div>
+                        </div>
+                      
+                            <div class="DateDePrise">
+                                <div>
+                                    <div>
+                                        <label for="">Date de prise en charge est : <Span class="fieldConfirm"></Span></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label for="">Heure de prise en charge est :<Span class="fieldConfirm"></Span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="DateDeRetour">
+                                <div>
+                                    <div>
+                                        <label for="">Date de retour est : <Span class="fieldConfirm"></Span></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label for="">Heure de prise en charge est : <Span class="fieldConfirm"></Span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="reservationConfimationBtn">CONFIRME</button>
+                            </div>
+                            <div>
+                                <button id="reservationBackBtn">MODIFIER</button>
+                            </div>                     
+                    </form>
+        
+                </div>
+               
+            </div>
+        </div>
     </section>
     
-    <footer>
+    <footer id="footer">
         <div>
             <div class="contact">
                 <div class="leftDiv">
