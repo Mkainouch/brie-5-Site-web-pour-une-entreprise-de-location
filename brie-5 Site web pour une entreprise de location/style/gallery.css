@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-#topNav button, footer .contact .leftDiv div button, #s-r-container #slideContainer #sildeShow button, #s-r-container #reservationContainer .reservation_form #reservationConfBtn, #reservationConfirmationContainer .reservationConfirmtion_form #reservationConfBtn {
+#topNav button, footer .contact .leftDiv div button, #s-r-container #slideContainer #sildeShow button, #s-r-container #reservationContainer .reservation_form #reservationConfBtn, #reservationConfirmationContainer .reservationConfirmtion_form .btns #confirmationBtn, #reservationConfirmationContainer .reservationConfirmtion_form .btns #modifyBtn {
   padding: 5px 12px;
   font-size: 18px;
   background-color: #A98B69;
@@ -13,7 +13,7 @@
   font-family: "Playfair" Display;
 }
 
-#topNav button:hover, footer .contact .leftDiv div button:hover, #s-r-container #slideContainer #sildeShow button:hover, #s-r-container #reservationContainer .reservation_form #reservationConfBtn:hover, #reservationConfirmationContainer .reservationConfirmtion_form #reservationConfBtn:hover {
+#topNav button:hover, footer .contact .leftDiv div button:hover, #s-r-container #slideContainer #sildeShow button:hover, #s-r-container #reservationContainer .reservation_form #reservationConfBtn:hover, #reservationConfirmationContainer .reservationConfirmtion_form .btns #confirmationBtn:hover, #reservationConfirmationContainer .reservationConfirmtion_form .btns #modifyBtn:hover {
   color: #A98B69;
   background-color: #fff;
   border: 2px solid #A98B69;
@@ -941,21 +941,23 @@ section .gallery div div:hover div img {
   height: 100%;
   width: 100%;
   background-color: #fff;
-  justify-items: center;
 }
 
 #reservationConfirmationContainer .reservationConfirmtion_form {
-  width: 200px;
   margin: 8px auto;
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form #imgs {
+#reservationConfirmationContainer .reservationConfirmtion_form h1 {
+  padding: 32px 0;
+}
+
+#reservationConfirmationContainer .reservationConfirmtion_form #imgC {
   width: 360px;
   height: 200px;
 }
 
 @media (max-width: 400px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form #imgs {
+  #reservationConfirmationContainer .reservationConfirmtion_form #imgC {
     width: 90%;
     height: 160px;
     background-size: 100%;
@@ -963,31 +965,13 @@ section .gallery div div:hover div img {
   }
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form input {
-  font-size: 24px;
-  font-family: "Montserrat", sans-serif;
-  border: none;
-  border-bottom: 2px solid #A98B69;
-  background-color: #fff;
-  border-radius: 4px;
-  width: 90%;
+#reservationConfirmationContainer .reservationConfirmtion_form .output {
+  font-size: 18px;
 }
 
-@media (min-width: 991px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form input {
-    width: 90%;
-  }
-}
-
-@media (max-width: 767px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form input {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-}
-
-#reservationConfirmationContainer .reservationConfirmtion_form input:focus {
-  outline: none;
+#reservationConfirmationContainer .reservationConfirmtion_form .output span {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #reservationConfirmationContainer .reservationConfirmtion_form .fullName {
@@ -1018,25 +1002,35 @@ section .gallery div div:hover div img {
   }
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form .birthday {
+#reservationConfirmationContainer .reservationConfirmtion_form .birthdayC {
   width: 100%;
   margin: 16px;
+  display: flex;
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form .birthday div {
+#reservationConfirmationContainer .reservationConfirmtion_form .birthdayC div {
   width: 100%;
+}
+
+#reservationConfirmationContainer .reservationConfirmtion_form .birthdayC div {
+  width: 50%;
 }
 
 @media (max-width: 767px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form .birthday {
+  #reservationConfirmationContainer .reservationConfirmtion_form .birthdayC div {
+    margin-bottom: 16px;
     width: 90%;
-    margin: 0 0 0 16px;
   }
 }
 
-@media (min-width: 768px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form .birthday input {
-    width: 95%;
+#reservationConfirmationContainer .reservationConfirmtion_form .birthdayC div div {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+  #reservationConfirmationContainer .reservationConfirmtion_form .birthdayC {
+    display: block;
   }
 }
 
@@ -1153,44 +1147,52 @@ section .gallery div div:hover div img {
   }
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form .age {
-  display: flex;
-  padding: 16px;
+#reservationConfirmationContainer .reservationConfirmtion_form .numDeJours {
+  margin: 16px;
+  margin-bottom: 64px;
+}
+
+#reservationConfirmationContainer .reservationConfirmtion_form .btns {
   margin: 16px;
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form .age div {
-  width: 50%;
-}
-
-#reservationConfirmationContainer .reservationConfirmtion_form .age div div {
-  width: 100%;
-  padding: 8px;
-}
-
-#reservationConfirmationContainer .reservationConfirmtion_form #reservationConfBtn {
-  font-size: 30px;
+#reservationConfirmationContainer .reservationConfirmtion_form .btns #confirmationBtn {
+  font-size: 24px;
   float: right;
   margin-right: 32px;
 }
 
 @media (max-width: 767px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form #reservationConfBtn {
+  #reservationConfirmationContainer .reservationConfirmtion_form .btns #confirmationBtn {
     font-size: 24px;
     margin-right: 24px;
   }
 }
 
 @media (max-width: 400px) {
-  #reservationConfirmationContainer .reservationConfirmtion_form #reservationConfBtn {
+  #reservationConfirmationContainer .reservationConfirmtion_form .btns #confirmationBtn {
     font-size: 16px;
     margin-right: 16px;
   }
 }
 
-#reservationConfirmationContainer .reservationConfirmtion_form label {
-  font-size: 18px;
-  font-family: "Playfair" Display;
+#reservationConfirmationContainer .reservationConfirmtion_form .btns #modifyBtn {
+  font-size: 24px;
+  margin-right: 32px;
+}
+
+@media (max-width: 767px) {
+  #reservationConfirmationContainer .reservationConfirmtion_form .btns #modifyBtn {
+    font-size: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  #reservationConfirmationContainer .reservationConfirmtion_form .btns #modifyBtn {
+    font-size: 16px;
+    margin-right: 16px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1214,22 +1216,6 @@ section .gallery div div:hover div img {
 
 @media (min-width: 1200px) {
   #reservationConfirmationContainer .reservationConfirmtion_form {
-    width: 1200px;
+    width: 1000px;
   }
-}
-
-#reservationConfirmationContainer button {
-  color: #A98B69;
-  background-color: transparent;
-  font-weight: bold;
-  border: 2px solid #A98B69;
-  border-radius: 12px;
-  padding: 2px 8px;
-  margin: 32px 0 0 16px;
-}
-
-#reservationConfirmationContainer button:hover {
-  color: white;
-  background-color: red;
-  border: 2px solid red;
 }

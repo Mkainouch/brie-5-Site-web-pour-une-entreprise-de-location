@@ -192,12 +192,12 @@
                     <div id="imgs"></div>
                     <form action="">
                         <div class="fullName">
-                            <div class="prenom" onclick="firstName()">
+                            <div class="prenom">
                                 <div>
                                     <label for="">Prénom *</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="firstName" name="Prénom" placeholder=""  >
+                                    <input type="text" id="firstName" name="Prénom" placeholder="" onkeyup="this.value = this.value.toUpperCase();">
                                     <p id="firstNameP"></p>
                                 </div>
                             </div>
@@ -206,7 +206,7 @@
                                     <label for="">Nom *</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="lastName" name="Nom" placeholder="">
+                                    <input type="text" id="lastName" name="Nom" placeholder="" onkeyup="this.value = this.value.toUpperCase();">
                                     <p id="lastNameP"></p>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@
                                     <label for="">Ville, gare ou aéroport de départ</label>                    
                                 </div>
                                 <div>
-                                    <input type="text" id="fromCity" name="Ville, gare ou aéroport de départ">
+                                    <input type="text" id="fromCity" name="Ville, gare ou aéroport de départ" onkeyup="this.value = this.value.toUpperCase();">
                                 </div>
                             </div>
                             <div class="">
@@ -233,7 +233,7 @@
                                     <label for="">Ville, gare ou aéroport de retour</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="toCity" name="Ville, gare ou aéroport de retour">
+                                    <input type="text" id="toCity" name="Ville, gare ou aéroport de retour" onkeyup="this.value = this.value.toUpperCase();">
                                 </div>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
                                         <label for="">Heure de retour</label>
                                     </div>
                                     <div>
-                                        <input type="time" id="endHour" name="Heure de retour">
+                                        <input type="time" id="endHour" name="Heure de retour" >
                                     </div>
                                 </div>
                             </div>
@@ -286,76 +286,55 @@
             <!-- ================================================ -->
             <div id="reservationConfirmationContainer">
                 <div class="reservationConfirmtion_form">
-                    <div id="imgs" class="imgss"></div>
+                    <h1>Veuillez vérifier que les informations que vous avez saisies sont correctes</h1>
+                    <div id="imgC" class="imgss"></div>
                     <form action="">
                         <div class="fullName">
-                            <div class="prenom" onclick="firstName()">
-                                <div>
-                                    <label for="">Voter Prénom est : <Span class="fieldConfirm"></Span></label>
-                                </div>
-                            </div>
-                            <div class="nom">
-                                <div>
-                                    <label for="">Votre Nom est : <Span class="fieldConfirm"></Span></label>
-                                </div>
-                            </div>
+                            <div class="output">Voter Prénom est : <Span id="firstNameC"></Span></div>
+                            <div class="output">Votre Nom est : <Span id="lastNameC"></Span></div>
                         </div>
-                        <div class="birthday">
-                            <div>
-                                <label for="">Votre age est : <Span class="fieldConfirm"></Span></label>
-                            </div>
+                        <div class="birthdayC">
+                            <div class="output">Votre Date de naissance est : <Span id="birthDayC"></Span></div>                            
+                            <div class="output">Votre age est : <Span id="ageC"></Span></div>
                         </div>
                         <div class="city">
-                            <div class="">
-                                <div>
-                                    <label for="">Ville, gare ou aéroport de départ est : <Span class="fieldConfirm"></Span></label>                    
-                                </div>
+                            <div class="output">
+                                Ville, gare ou aéroport de départ est : <Span id="fromCityC"></Span>                    
                             </div>
-                            <div class="">
-                                <div>
-                                    <label for="">Ville, gare ou aéroport de retour est : <Span class="fieldConfirm"></Span></label>
-                                </div>
+                            <div class="output">
+                                Ville, gare ou aéroport de retour est : <Span id="toCityC"></Span>
                             </div>
                         </div>
-                      
-                            <div class="DateDePrise">
-                                <div>
-                                    <div>
-                                        <label for="">Date de prise en charge est : <Span class="fieldConfirm"></Span></label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="">Heure de prise en charge est :<Span class="fieldConfirm"></Span></label>
-                                    </div>
-                                </div>
+                        <div class="DateDePrise">
+                            <div class="output">
+                                Date de prise en charge est : <Span id="startDateC"></Span>
                             </div>
-                            <div class="DateDeRetour">
-                                <div>
-                                    <div>
-                                        <label for="">Date de retour est : <Span class="fieldConfirm"></Span></label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <label for="">Heure de prise en charge est : <Span class="fieldConfirm"></Span></label>
-                                    </div>
-                                </div>
+                            <div class="output">
+                                Heure de prise en charge est :<Span id="startHourC"></Span>
                             </div>
-                            <div>
-                                <button id="reservationConfimationBtn">CONFIRME</button>
+                        </div>
+                        <div class="DateDeRetour">
+                            <div class="output">
+                                Date de retour est : <Span id="endDateC"></Span>
                             </div>
-                            <div>
-                                <button id="reservationBackBtn">MODIFIER</button>
-                            </div>                     
+                            <div class="output">
+                                Heure de prise en charge est : <Span id="endHourC"></Span>
+                            </div>
+                        </div>
+                        <div class="numDeJours output">
+                            Nombre de jours : <Span id="daysC"> </Span>
+                        </div>
+                        <div class="btns">
+                            <button id="modifyBtn" type="button" onclick="reservationModifyBtn()">MODIFIER</button>
+                            <button id="confirmationBtn" type="submit" onclick="reservationConfimationBtn()">CONFIRME</button>
+                        </div>
+                        
                     </form>
-        
                 </div>
-               
             </div>
         </div>
     </section>
-    
+
     <footer id="footer">
         <div>
             <div class="contact">

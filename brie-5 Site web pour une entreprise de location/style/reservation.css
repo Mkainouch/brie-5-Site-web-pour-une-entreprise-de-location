@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.topNav button, footer .contact .leftDiv div button, form Button {
+#topNav button, footer .contact .leftDiv div button, form Button {
   padding: 5px 12px;
   font-size: 18px;
   background-color: #A98B69;
@@ -13,15 +13,13 @@
   font-family: "Playfair" Display;
 }
 
-.topNav button:hover, footer .contact .leftDiv div button:hover, form Button:hover {
+#topNav button:hover, footer .contact .leftDiv div button:hover, form Button:hover {
   color: #A98B69;
   background-color: #fff;
   border: 2px solid #A98B69;
 }
 
-.topNav .logo {
-  float: left;
-  width: 300px;
+#topNav .logo {
   height: 50px;
   color: #fff;
   font-family: "Merienda One", cursive;
@@ -29,13 +27,49 @@
   padding: 12px 0 0 24px;
 }
 
-.topNav .logo span {
+#topNav .logo span {
   font-family: "Roboto", sans-serif;
   color: #A98B69;
   font-weight: bold;
 }
 
-.topNav {
+#checkNav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #checkNav:checked ~ #topNav {
+    display: block;
+  }
+  #checkNav:checked ~ #checkNavBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+  }
+}
+
+#checkNavBtn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #checkNavBtn {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    border-bottom: 3px solid #A98B69;
+    z-index: 50;
+  }
+}
+
+#checkNavBtn img {
+  margin: 24px 0 24px 24px;
+}
+
+#topNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,13 +83,26 @@
   z-index: 1;
 }
 
-@media (max-width: $maxMobile) {
-  .topNav {
-    display: block;
+@media (max-width: 767px) {
+  #topNav {
+    display: none;
+    text-align: center;
+    padding: 72px 0 32px 0;
+    width: 70%;
+    border-right: 3px solid #A98B69;
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }
 
-.topNav ul {
+@media (max-width: 767px) {
+  #topNav .logo {
+    background-color: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+}
+
+#topNav ul {
   list-style: none;
   color: #fff;
   display: -webkit-box;
@@ -64,33 +111,40 @@
   padding: 24px 0;
 }
 
-@media (max-width: $maxMobile) {
-  .topNav ul {
+@media (max-width: 767px) {
+  #topNav ul {
     display: block;
+    padding: 32px 0 0 0;
   }
 }
 
-.topNav ul li {
+#topNav ul li {
   margin-right: 15%;
 }
 
-.topNav ul li a {
+#topNav ul li a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   font-weight: bold;
 }
 
-.topNav ul li a:hover {
+#topNav ul li a:hover {
   color: #A98B69;
 }
 
-.topNav button {
+@media (max-width: 767px) {
+  #topNav ul li {
+    margin: 0 0 24px 0;
+  }
+}
+
+#topNav button {
   border: #000;
   background-color: black;
 }
 
-.topNav button:hover {
+#topNav button:hover {
   color: #fff;
   background-color: #A98B69;
   border: none;
@@ -263,8 +317,18 @@ footer .contact .leftDiv div input {
   border: none;
 }
 
+@media (max-width: 767px) {
+  footer .contact .leftDiv {
+    width: 100%;
+  }
+}
+
+footer .contact .rightDiv {
+  padding: 8px 0 8px 16px;
+}
+
 footer .contact .rightDiv div {
-  padding: 8px 0 8px 0;
+  padding: 8px 0;
 }
 
 footer .contact .rightDiv ul {
@@ -281,6 +345,19 @@ footer .contact .rightDiv ul li {
 footer .contact .rightDiv ul li img {
   height: 30px;
   width: 30px;
+}
+
+@media (max-width: 767px) {
+  footer .contact .rightDiv {
+    width: 100%;
+    padding: 16px 0 8px 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .contact {
+    display: block;
+  }
 }
 
 footer .links {

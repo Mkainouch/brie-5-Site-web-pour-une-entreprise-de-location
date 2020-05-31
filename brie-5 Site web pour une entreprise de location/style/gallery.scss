@@ -479,12 +479,15 @@ section{
     height: 100%;
     width: 100%;
     background-color: $thirdColor;
-    justify-items: center;
     .reservationConfirmtion_form{
-        width: 200px;
+        // width: 200px;
         margin:8px auto;
         // background-color: $thirdColor;
-        #imgs{
+        // justify-content: space-around;
+        h1{
+            padding: 32px 0;
+        }
+        #imgC{
             width: 360px; 
             height: 200px; 
             @media #{(max-width: 400px)} {
@@ -494,25 +497,13 @@ section{
                 background-repeat: no-repeat;
             }
         }
-        input{
-            font-size: 24px;
-            font-family: $navFontFamily;
-            border: none ;
-            border-bottom: 2px solid $mainColor;
-            background-color:$thirdColor;
-            border-radius:4px ;
-            width: 90%;
-            @media #{$minMedium} {
-                width: 90%;
-            }
-            @media #{$maxMobile} {
-                width: 100%;
-                margin-bottom: 16px;
-            }
-        }
-        input:focus{
-            outline: none;
-        }
+       .output{
+           font-size: 18px;
+           span{
+               font-size: 20px;
+               font-weight: bold;
+           }
+       }
         .fullName{
             display: flex;
             margin: 16px;
@@ -534,23 +525,28 @@ section{
             @media #{$minSmall} {
             }
         }
-        .birthday{
+        .birthdayC{
             width: 100%;
             margin: 16px;
+            display: flex;
             div{
                 width: 100%;
             }
-            @media #{$maxMobile} {
-                width: 90%;
-                margin: 0 0 0 16px;
-
-            }
-           
-            input{
-                @media #{$minSmall} {
-                    width: 95%;
-                    
+            div{
+                width: 50%;
+                @media #{$maxMobile} {
+                    margin-bottom: 16px;
+                    width: 90%;
                 }
+                div{
+                    width: 100%;
+                    margin-bottom: 0px;
+                }
+            }
+            @media #{$maxMobile} {
+              display: block;
+            }
+            @media #{$minSmall} {
             }
         }
         .city{
@@ -575,110 +571,95 @@ section{
             }
         }
 
-        
-            
-            .DateDePrise{
-                width: 50%;
-                display: flex;
-                margin: 16px;
-                div{
-                    width: 50%;
-                    div{
-                        width: 100%;
-                        @media #{$maxMobile} {
-                            margin-bottom: 0px; 
-                        }
-                    }
-                    @media #{$maxMobile} {
-                        width: 100%;  
-                        margin-bottom: 16px; 
-                    }
-                }
-                @media #{$maxMobile} {
-                    width: 100%;
-                    display: block;
-                }
-                @media #{$minSmall} { 
-                    width: 100%;
-                }
-                // @media #{$minLarge} {
-                //     width: 92%;
-                // }
-                
-            }
-
-            .dateDeRetour{
-                width: 50%;
-                display: flex;
-                margin: 16px;
-                div{
-                    width: 50%;
-                    div{
-                        width: 100%;
-                        @media #{$maxMobile} {
-                            margin-bottom: 0px; 
-                        }
-                    }
-                    @media #{$maxMobile} {
-                        width: 100%;                      
-                        margin-bottom: 16px;
-                    }
-                }
-                @media #{$maxMobile} {
-                    width: 100%;
-                    display: block;
-                }
-                @media #{$minSmall} {
-                    width: 100%;
-                }
-            }
-        
-        .age{
+        .DateDePrise{
+            width: 50%;
             display: flex;
-            padding: 16px;
             margin: 16px;
             div{
                 width: 50%;
                 div{
                     width: 100%;
-                    padding: 8px;
+                    @media #{$maxMobile} {
+                        margin-bottom: 0px; 
+                    }
                 }
-                // @media #{$maxMobile} {
-                //     width: 100%;
-                // }
+                @media #{$maxMobile} {
+                    width: 100%;  
+                    margin-bottom: 16px; 
+                }
             }
-            // @media #{$minSmall} {
-            //     width: 100%;
-            //     padding: 5px 0px;
-            // }
-            // @media #{$maxMobile} {
-            //     display: block;
-            //     width: 100%;
-            //     padding:0;
-            //     margin: 0;
-            // }
-        }
-
-        #reservationConfBtn{
-            @extend %buttonStyle;
-            font-size: 30px;
-            float: right;
-            margin-right: 32px;
             @media #{$maxMobile} {
-                font-size: 24px;
-                margin-right: 24px;
+                width: 100%;
+                display: block;
             }
-            @media #{(max-width: 400px)} {
-                font-size: 16px;
-                margin-right: 16px;
+            @media #{$minSmall} { 
+                width: 100%;
             }
+            // @media #{$minLarge} {
+            //     width: 92%;
+            // }
+            
         }
 
-        label{
-            font-size: 18px;
-            font-family: $fontFamily;
+        .dateDeRetour{
+            width: 50%;
+            display: flex;
+            margin: 16px;
+            div{
+                width: 50%;
+                div{
+                    width: 100%;
+                    @media #{$maxMobile} {
+                        margin-bottom: 0px; 
+                    }
+                }
+                @media #{$maxMobile} {
+                    width: 100%;                      
+                    margin-bottom: 16px;
+                }
+            }
+            @media #{$maxMobile} {
+                width: 100%;
+                display: block;
+            }
+            @media #{$minSmall} {
+                width: 100%;
+            }
         }
-        
+        .numDeJours{
+            margin: 16px;
+            margin-bottom: 64px;
+        }
+        .btns{
+            margin: 16px;
+            #confirmationBtn{
+                @extend %buttonStyle;
+                font-size: 24px;
+                float: right;
+                margin-right: 32px;
+                @media #{$maxMobile} {
+                    font-size: 24px;
+                    margin-right: 24px;
+                }
+                @media #{(max-width: 400px)} {
+                    font-size: 16px;
+                    margin-right: 16px;
+                }
+            }
+            #modifyBtn{
+                @extend %buttonStyle;
+                font-size: 24px;
+                margin-right: 32px;
+                @media #{$maxMobile} {
+                    font-size: 24px;
+                    margin-right: 24px;
+                }
+                @media #{(max-width: 400px)} {
+                    font-size: 16px;
+                    margin-right: 16px;
+                }
+            }
+        }
         @media #{$maxMobile} {
             width: 90%;
             padding-bottom: 150px;
@@ -694,25 +675,7 @@ section{
             width: 94%;
         }
         @media #{$minLarge} {
-            width: 1200px;
-        }
-       
-    }
-    // reservation colse button
-    button {
-        
-        color: $mainColor;
-        background-color:rgba($color: #000000, $alpha: .0);
-        font-weight: bold;;
-        border:2px solid $mainColor;
-        border-radius: 12px;
-        padding: 2px 8px;
-        margin: 32px 0 0 16px;
-        &:hover{
-            color: white;
-            background-color: red;
-            border:2px solid red;
+            width: 1000px;
         }
     }
-
 }

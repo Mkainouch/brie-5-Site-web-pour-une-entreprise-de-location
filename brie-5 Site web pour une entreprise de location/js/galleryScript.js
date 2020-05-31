@@ -46,14 +46,29 @@ function slidePass(i){
 
 // ============================================= reservation =================
 
-const firstName = document.getElementById("firstName").value,
-    lastName = document.getElementById("lastName").value,
-    birthDay = document.getElementById("birthDay").value,
-    fromCity = document.getElementById("fromCity").value,
-    toCity = document.getElementById("toCity").value,
-    startDate = document.getElementById("startDate").value,
-    endDate = document.getElementById("endDate").value,
-    endHour = document.getElementById("endHour").value;
+const 
+    img = document.getElementById("imgs"),
+    firstName = document.getElementById("firstName"),
+    lastName = document.getElementById("lastName"),
+    birthDay = document.getElementById("birthDay"),
+    fromCity = document.getElementById("fromCity"),
+    toCity = document.getElementById("toCity"),
+    startDate = document.getElementById("startDate"),
+    startHour = document.getElementById("startHour"),
+    endDate = document.getElementById("endDate"),
+    endHour = document.getElementById("endHour"),
+    imgC = document.getElementById("imgC"),
+    firstNameC = document.getElementById("firstNameC"),
+    lastNameC = document.getElementById("lastNameC"),
+    ageC = document.getElementById("ageC"),
+    birthDayC = document.getElementById("birthDayC"),
+    fromCityC = document.getElementById("fromCityC"),
+    toCityC = document.getElementById("toCityC"),
+    startDateC = document.getElementById("startDateC"),
+    startHourC = document.getElementById("startHourC"),
+    endDateC = document.getElementById("endDateC"),
+    endHourC = document.getElementById("endHourC"),
+    daysC = document.getElementById("daysC");
 
 function reservationForm(){
     document.getElementById('reservationContainer').style.display = "block";
@@ -63,24 +78,66 @@ function reservationForm(){
     document.getElementById('footer').style.display = "none";
 
 }
+
 function reservationClose(){
     document.getElementById('reservationContainer').style.display = "none";
     document.getElementById('slideContainer').style.display = "block";
 }
+
 function reservationConf(){
+    if(firstName.value === "" || lastName.value === "" ||  birthDay === "" || fromCity === "" || toCity ==="" || startDate === "" || startHour === "" || endDate === "" || endHour === "" ){
+        alert(" Tous les champs sont requis ")
+    }else{ 
     document.getElementById('reservationConfirmationContainer').style.display = "block";
     document.getElementById('reservationContainer').style.display = "none";
     document.getElementById('gallery').style.display = "none";
     document.getElementById('header').style.display = "none";
     document.getElementById('footer').style.display = "none";
+
+    const imgBackground = img.style.backgroundImage;
+    imgC.style.backgroundImage = imgBackground;
+
     
+    var age = calculatAge(new Date(birthDay.value).getFullYear());
+    var numberOfDays = calculDayDiff(startDate.value.toString(), endDate.value.toString());
+
+    firstNameC.innerText = firstName.value;
+    lastNameC.innerText = lastName.value;
+    ageC.innerText = age;
+    birthDayC.innerText = birthDay.value;
+    fromCityC.innerText = fromCity.value;
+    toCityC.innerText = toCity.value;
+    startDateC.innerText = startDate.value;
+    startHourC.innerText = startHour.value;
+    endDateC.innerText = endDate.value;
+    endHourC.innerText = endHour.value;
+    daysC.innerText = numberOfDays;
+    }
+}
+
+function calculatAge(birth){
+    ageMs = Date.parse(Date()) - Date.parse(birth);
+    age = new Date();
+    age.setTime(ageMs);
+    ageYear = age.getFullYear() - 1970;
+    return ageYear;
+}
+
+function calculDayDiff(date1, date2)
+{
+    date1 = new Date(date1).getTime() / 86400000;
+    date2 = new Date(date2).getTime() / 86400000;
+    return new Number(date2 - date1).toFixed(0);
+}
+function reservationConfimationBtn(){
+    alert("merci " + firstName.value + " votre réservation est bien enregistré");
+}
+function reservationModifyBtn(){
+    document.getElementById('reservationConfirmationContainer').style.display = "none";
+    document.getElementById('reservationContainer').style.display = "block";
+    document.getElementById('gallery').style.display = "none";
+    document.getElementById('header').style.display = "none";
+    document.getElementById('footer').style.display = "none";
 }
 
 // ====================================================
-
-var SpanConfirmInfo = document.getElementsByClassName("fieldConfirm");
-SpanConfirmInfo[0].innerHTML=reservation_form.firstName.toUpperCase();
-SpanConfirmInfo[1].innerHTML=lastName.toUpperCase();
-SpanConfirmInfo[2].innerHTML=birthDay.toUpperCase();
-SpanConfirmInfo[3].innerHTML=fromCity.toUpperCase();
-
